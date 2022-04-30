@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="popup.css"/>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div id="imageCont">
+			<input id="imagePicker" type="file" accept="image/*" tabindex="-1">
+			<label id="imagePickerLabel" class="interactive" for="imagePicker" tabindex="0">
+				<img id="userImage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEUAAACDaS7WwHSOcx+Odye+r2K/pVR2ZCGZfSm+pEymjjqHbiSafSm/pU+hiz7JtGPQvnrUu2akjj/eyXqC0XspAAAAAXRSTlMAQObYZgAAAEVJREFUeF7tyscRQCEMxNC1yT+H/ntlPJzXDYCuesi/2wvJ7leIbDstqoFERSwDJJDKvGCBBe6H9A1gn3QZqMGpKY7gdnb/pw37Q67O/QAAAABJRU5ErkJggg==" width="16" height="16" draggable="false" />
+			</label>
+			<span id="popupOr" class="str">or</span>
+			<button id="showEditor" class="interactive main"><div id="popupEditor" class="str">Editor</div></button>
+		</div>
+		<div id="editor">
+			<div class="buttonColumn">
+				<button class="interactive main" id="eImg"><div id="popupImage" class="str">Image</div></button>
+				<button class="interactive" id="eFit"><div id="popupFit" class="str">Fit</div></button>
+				<button class="interactive" id="eMask"><div id="popupMask" class="str">Mask</div></button>
+			</div>
+			<div id="editorCanvasCont">
+				<canvas id="editorCanvas" width="100" height="100"></canvas>
+				<div id="scaleBar"><div></div></div>
+			</div>
+			<div class="buttonColumn">
+				<button class="interactive" id="eReset"><div id="popupReset" class="str">Reset</div></button>
+				<canvas id="previewCanvas" width="16" height="16"></canvas>
+				<button class="interactive main" id="eOk"><div id="popupOK" class="str">OK</div></button>
+			</div>
+			<div id="fitOverlay" class="overlay">
+				<div id="fitMenu" class="menu">
+					<div class="option" data-value="cover"><span id="popupCover" class="str">Cover</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.5 4A2.495 2.495 0 0 0 0 6.5v7C0 14.885 1.115 16 2.5 16h15c1.385 0 2.5-1.115 2.5-2.5v-7C20 5.115 18.885 4 17.5 4zm5 1h5C13.885 5 15 6.115 15 7.5v5c0 1.385-1.115 2.5-2.5 2.5h-5A2.495 2.495 0 0 1 5 12.5v-5C5 6.115 6.115 5 7.5 5z"/></svg></div>
+					<div class="option" data-value="contain"><span id="popupContain" class="str">Contain</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><rect width="13" height="13" x="3.5" y="3.5" fill="none" stroke="currentColor" stroke-linecap="round" rx="2.5"/><rect width="12" height="8" x="4" y="6" fill-rule="evenodd" paint-order="stroke fill markers" rx="2.5"/></svg></div>
+					<div class="option" data-value="full"><span id="popupFullSize" class="str">Full size</span></div>
+				</div>
+			</div>
+			<div id="maskOverlay" class="overlay">
+				<div id="maskMenu" class="menu">
+					<div class="option" data-value="none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 0h16v16H0z"/></svg></div>
+					<div class="option" data-value="rounded"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect width="16" height="16" rx="5"/></svg></div>
+					<div class="option" data-value="circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

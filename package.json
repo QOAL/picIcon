@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "description": "A web extension for setting a custom image in your extensions area",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QOAL/localisetime.git"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/QOAL/localisetime/issues"
+  },
+  "homepage": "https://github.com/QOAL/localisetime#readme",
+  "devDependencies": {
+    "adm-zip": "^0.5.9"
+  }
+}

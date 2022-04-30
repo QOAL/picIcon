@@ -1,0 +1,62 @@
+{
+	"extensionName": {
+		"message": "PicIcon",
+		"description": "Name of the extension."
+	},
+
+	"extensionDescription": {
+		"message": "Put a picture of your choice in the extension area.",
+		"description": "Description of the extension."
+	},
+
+
+	"popupOr": {
+		"message": "or",
+		"description": "Text between the simple image picker, and the button which opens the full image editor."
+	},
+
+	"popupEditor": {
+		"message": "Editor",
+		"description": "Button text for opening the full image editor."
+	},
+
+	"popupImage": {
+		"message": "Image",
+		"description": "Button text for opening the image file selector."
+	},
+
+	"popupFit": {
+		"message": "Fit",
+		"description": "Button text for picking an image zoom style. This opens a sub menu."
+	},
+
+	"popupMask": {
+		"message": "Mask",
+		"description": "Button text for picking a mask that is applied to the final image. This opens a sub menu."
+	},
+
+	"popupReset": {
+		"message": "Reset",
+		"description": "Button text for resetting any translating/scaling/masking currently applied to the user image."
+	},
+
+	"popupOK": {
+		"message": "OK",
+		"description": "OK"
+	},
+
+	"popupCover": {
+		"message": "Cover",
+		"description": "This fit mode scales the user image so that all of the final image is covered in the users image. The user image is likely to spill over the sides."
+	},
+
+	"popupContain": {
+		"message": "Contain",
+		"description": "This fit mode scales the user image so that the entire image is contained within the bounds of the final image."
+	},
+
+	"popupFullSize": {
+		"message": "Full size",
+		"description": "This just resets the zoom level."
+	}
+}
