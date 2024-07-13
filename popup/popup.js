@@ -437,16 +437,20 @@ function setFitMode(e) {
 	switch (selectedMode) {
 		case "cover":
 		case "contain":
-			let scaleInfo = getScaleInfo(newImage.img.width, newImage.img.height, selectedMode === "cover")
+			const scaleInfo = getScaleInfo(newImage.img.width, newImage.img.height, selectedMode === "cover")
+
 			newImage.scale = scaleInfo.h / newImage.img.height
+
 			setScaleInfo(scaleInfo)
+
+			document.getElementById("scaleBar").scrollTo(newImage.scaleSteps * 10, 0)
 			break
 
 		case "full":
 			newImage.scale = 1
-	}
 
-	document.getElementById("scaleBar").scrollTo(newImage.scaleSteps * 10, 0)
+			document.getElementById("scaleBar").scrollTo(0, 0)
+	}
 
 	newImage.translate = { x: 0, y: 0 }
 

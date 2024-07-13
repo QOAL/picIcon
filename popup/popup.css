@@ -77,11 +77,12 @@ body.dragOver * {
 	background-color: hsla(var(--interactive-hsl), .2);
 }
 .interactive > div, .interactive > img {
-	transition: transform .125s ease-in-out;
+	transition: transform .25s ease-in-out;
 	pointer-events: none;
 }
 .interactive:active > div, .interactive:active > img {
 	transform: scale(.9) translate(var(--targetPos));
+	transition: transform .05s ease-in-out;
 }
 
 #imageCont {
@@ -109,6 +110,7 @@ body.dragOver * {
     justify-content: center;
 	gap: 10px;
 	padding: 10px;
+	width: fit-content;
 }
 .editing #editor {
 	display: flex;
